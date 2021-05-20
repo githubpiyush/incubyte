@@ -1,6 +1,6 @@
 I have used python 3.9.5 for this assignment.
 
-There were some conflicts in the datatype given in the table and the sample file. SO i have give you two folders which has almost same scripts with slight changes which i thought is correct.
+There were some conflicts in the datatype given in the table and the sample file. SO I have given you two folders which has almost same scripts with slight changes which I thought is correct.
 
 Common things:
   config.py :
