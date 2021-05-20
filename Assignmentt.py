@@ -33,4 +33,5 @@ def read_file(filename) :
                 except:
                     print("Duplicate error")
                     continue
-read_file('sample.txt')
+if __name__ == '__main__':
+    read_file('sample.txt')
