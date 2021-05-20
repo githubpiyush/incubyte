@@ -1,6 +1,5 @@
 from create_table import create_collection_obj
-import time
-db_name = 'local'
+from config import db_name
 from rules import check_dict
 
 def read_file(filename) :
