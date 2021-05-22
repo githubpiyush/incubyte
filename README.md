@@ -3,14 +3,19 @@ I have used python 3.9.5 for this assignment.
 There were some conflicts in the datatype given in the table and the sample file. SO I have given you two folders which has almost same scripts with slight changes which I thought is correct.
 
 Common things:
+  
   config.py :
       This will have two variable one is mongo_url and another one is db_name.
       As the name suggest please put mongoDB url and database name.
+  
   create_table.py:
     This file will create collection for country and will make name primary key.
 
-  As per assignment folder:
+    
+    As per assignment folder:  
+    
     rules.py:
+    
       As per datatype and constraints I have created all the functions.
       "Customer_Name" and "Dr_Name" will have this type:
       VARCHAR (255) : Variable length string with 250 max length.
