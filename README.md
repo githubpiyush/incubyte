@@ -11,8 +11,11 @@ Common things:
   create_table.py:
     This file will create collection for country and will make name primary key.
 
-  As per assignment folder:
+    
+    As per assignment folder:  
+    
     rules.py:
+    
       As per datatype and constraints I have created all the functions.
       "Customer_Name" and "Dr_Name" will have this type:
       VARCHAR (255) : Variable length string with 250 max length.
