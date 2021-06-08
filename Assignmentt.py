@@ -1,5 +1,5 @@
 from create_table import create_stage_table
-import re
+import re, sys
 from mysql.connector import Error
 from config import table_name
 from config import fetch_country_query, delete_staging_table
@@ -14,8 +14,12 @@ def read_file(filename) :
     # Initialize variables in order to read the file and iterate over it
     line_counter = 0
     column_name_list = []
-    file_object = open(filename, "r")
     column_name_string = ""
+    try:
+        file_object = open(filename, "r")
+    except Exception as e:
+        print('File not found')
+        sys.exit()
 
     # Start the iteration process with file object
     for current_row in file_object :
@@ -71,10 +75,11 @@ def read_file(filename) :
             database_cursor.execute(transfer_data_query)
             connection.commit()
         except Error as e:
-            print("Error occured ::", e)
+            # Uncomment below line in order to see error on console
+            # print("Error occured ::", e)
             pass
     # Uncomment below line to delete staging table after execution
     # database_cursor.execute(delete_staging_table)
 
 if __name__ == '__main__':
-    read_file('sample.txt')
+    read_file(r'sample.txt')
