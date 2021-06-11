@@ -16,7 +16,7 @@ I have used python 3.9.5 for this assignment.
   create_table.py:
     This file contains one function named create_stage_table that will create database and staging table using queries written in config file and also return the connection and cursor object of the database.
 
-  Assignment.py
+  Assignment.py 
     This file contains primary function of this assignment named read_file which needs path of text file (which contains detail information) as argument.
     Functionality of this method is given using comment in every part of the code.
     It will use create_table and config sripts in order to insert data into staging file followed by insertion of data from staging table into corresponding country tables.
