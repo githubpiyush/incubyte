@@ -88,7 +88,7 @@ class Database:
                 connection, database_cursor = self.create_stage_table(self.table_name)
                 try:
                     # Insert current row into staging table and commit into DB
-                    insert_table_query = 'INSERT INTO '+ table_name +' ('+column_name_string[:-1]+ ') VALUES '+ str(tuple(current_row))
+                    insert_table_query = 'INSERT INTO '+ self.table_name +' ('+column_name_string[:-1]+ ') VALUES '+ str(tuple(current_row))
                     database_cursor.execute(insert_table_query)
                     connection.commit()
                 except Error as e:
@@ -104,8 +104,8 @@ class Database:
             try:
                 # Create country table if it does not exists
                 # Transfer related data from staging table
-                create_country_table = 'create table IF NOT EXISTS Table_'+new_table[0]+' like '+table_name
-                transfer_data_query = 'INSERT INTO Table_'+new_table[0]+' SELECT * FROM '+table_name+' WHERE Country="'+new_table[0]+'"'
+                create_country_table = 'create table IF NOT EXISTS Table_'+new_table[0]+' like '+self.table_name
+                transfer_data_query = 'INSERT INTO Table_'+new_table[0]+' SELECT * FROM '+self.table_name+' WHERE Country="'+new_table[0]+'"'
 
                 database_cursor.execute(create_country_table)
                 database_cursor.execute(transfer_data_query)
