@@ -1,6 +1,7 @@
 I have used python 3.9.5 for this assignment.
 
   config.py :
+
     This file contains host name, user name, user password and name of the database.
 
     table_name contains staging table name.
